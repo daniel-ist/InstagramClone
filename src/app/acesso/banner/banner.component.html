@@ -1,0 +1,5 @@
+<div class="banner-background">
+    <!-- aqui o [@banner] faz referencia à trigger de animação -->
+    <img *ngFor="let imagem of imagens"
+    [src]="imagem.url" [@banner]="imagem.estado"/>
+</div>
