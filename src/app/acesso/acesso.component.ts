@@ -29,8 +29,14 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class AcessoComponent implements OnInit {
 
-  public estadoBanner: string = 'criado'
-  public estadoPainel: string = 'criado'
+   /* NOTA:                    ***************/
+  /*** Pai emite para o filho (input);
+  /*** Filho emite para o pai (output).  ****/
+
+  public estadoBanner = 'criado';
+  public estadoPainel = 'criado';
+
+  public cadastro = false;
 
 
   constructor() { }
@@ -38,4 +44,7 @@ export class AcessoComponent implements OnInit {
   ngOnInit() {
   }
 
+  public exibirPainel(event: string): void {
+    this.cadastro = event === 'cadastro' ? true : false;
+  }
 }
