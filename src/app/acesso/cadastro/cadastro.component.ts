@@ -7,7 +7,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
- @Output() public exibirPainel: EventEmitter<string> = new EventEmitter<string>();
+ @Output() public exibirPainel1: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
@@ -15,6 +15,6 @@ export class CadastroComponent implements OnInit {
   }
 
   public exibirPainelLogin(): void {
-    this.exibirPainel.emit('login');
+    this.exibirPainel1.emit('login');
   }
 }

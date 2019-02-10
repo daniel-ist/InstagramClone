@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   /*** Pai emite para o filho (input);
   /*** Filho emite para o pai (output).  ****/
 
-  @Output() public exibirPainel: EventEmitter<string> = new EventEmitter<string>();
+  @Output() public exibirPainel2: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
@@ -19,8 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   public exibirPainelCadastro(): void {
-    console.log('Chegamos aqui!');
-    this.exibirPainel.emit('cadastro');
+    this.exibirPainel2.emit('cadastro');
   }
 
 }
